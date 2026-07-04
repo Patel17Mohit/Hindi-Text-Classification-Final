@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sentiment Analysis</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🧠 Hindi NLP
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../pages/introduction.html">Documentation</a></li>
+
+<li><a href="../concepts/preprocessing.html">Concepts</a></li>
+
+<li><a href="../workflows/preprocessing.html">Workflows</a></li>
+
+<li><a href="sentiment-analysis.html" class="active">Applications</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>😊 Application 3: Sentiment Analysis</h1>
+
+<p>
+
+Learn how Natural Language Processing is used to determine whether a
+piece of text expresses a positive, negative, or neutral opinion.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📖 Overview</h2>
+
+<p>
+
+Sentiment Analysis is an NLP technique used to identify whether a piece
+of text expresses a <strong>positive</strong>,
+<strong>negative</strong>, or <strong>neutral</strong> opinion.
+
+</p>
+
+<p>
+
+It is widely used to analyze customer reviews, social media posts,
+product feedback, surveys, and public opinions.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= NLP CONCEPTS ================= -->
+
+<section class="container">
+
+<h2>🧠 Relevant NLP Concepts Used</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🧹 Text Preprocessing</h3>
+
+<ul>
+
+<li>Text Cleaning</li>
+
+<li>Stop-word Removal</li>
+
+<li>Tokenization</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>📊 Feature Engineering</h3>
+
+<ul>
+
+<li>Bag of Words (BoW)</li>
+
+<li>TF-IDF</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>🤖 Language Representation</h3>
+
+<ul>
+
+<li>Word Embeddings</li>
+
+<li>Contextual Embeddings</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHY NLP ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>❓ Why These Concepts Are Needed</h2>
+
+<p>
+
+Raw customer reviews and feedback often contain noisy information,
+informal language, and unnecessary words.
+
+</p>
+
+<h3>Positive Review</h3>
+
+<blockquote>
+
+"यह मोबाइल बहुत अच्छा है।"
+
+</blockquote>
+
+<p>
+
+The model should classify this review as:
+
+</p>
+
+<blockquote>
+
+✅ Positive Sentiment
+
+</blockquote>
+
+<h3>Negative Review</h3>
+
+<blockquote>
+
+"यह सेवा बहुत खराब है।"
+
+</blockquote>
+
+<p>
+
+The model should classify this review as:
+
+</p>
+
+<blockquote>
+
+❌ Negative Sentiment
+
+</blockquote>
+
+<p>
+
+Text preprocessing removes noise, feature engineering extracts
+important information, and language representation captures semantic
+meaning, enabling accurate sentiment prediction.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= BENEFITS ================= -->
+
+<section class="container">
+
+<h2>🚀 Expected Benefits</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>💬 Customer Opinion Analysis</h3>
+
+<p>
+
+Helps organizations understand how customers feel about products and
+services.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📦 Better Product Development</h3>
+
+<p>
+
+Customer feedback helps companies improve product quality and introduce
+new features.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📈 Improved Business Decisions</h3>
+
+<p>
+
+Provides valuable insights for marketing, sales, and customer support
+strategies.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⭐ Enhanced Customer Satisfaction</h3>
+
+<p>
+
+Allows businesses to identify and resolve customer issues quickly.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= EXAMPLE ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>💡 Example</h2>
+
+<p>
+
+An e-commerce platform collects customer reviews written in Hindi.
+
+</p>
+
+<h3>Review 1</h3>
+
+<blockquote>
+
+"यह मोबाइल बहुत अच्छा है।"
+
+</blockquote>
+
+<p>
+
+<strong>Predicted Sentiment:</strong>
+
+</p>
+
+<blockquote>
+
+✅ Positive
+
+</blockquote>
+
+<h3>Review 2</h3>
+
+<blockquote>
+
+"यह सेवा बहुत खराब है।"
+
+</blockquote>
+
+<p>
+
+<strong>Predicted Sentiment:</strong>
+
+</p>
+
+<blockquote>
+
+❌ Negative
+
+</blockquote>
+
+<p>
+
+The sentiment analysis system helps businesses understand customer
+opinions and improve their products and services.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONCLUSION ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📌 Conclusion</h2>
+
+<p>
+
+Sentiment Analysis is one of the most widely used applications of
+Natural Language Processing. By combining text preprocessing, feature
+engineering, and language representation techniques, NLP systems can
+accurately classify opinions expressed in Hindi text, helping
+organizations make better decisions and enhance customer experiences.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<section class="container">
+
+<div class="page-navigation">
+
+<a href="chatbots.html" class="btn">
+
+⬅ Previous
+
+</a>
+
+<a href="../index.html" class="btn secondary">
+
+🏠 Home
+
+</a>
+
+<a href="machine-translation.html" class="btn">
+
+Next ➜
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Hindi Text Classification using Natural Language Processing
+
+</p>
+
+<p>
+
+Developed by <strong>Mayank & Mohit</strong>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

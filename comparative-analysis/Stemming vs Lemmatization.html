@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Stemming vs Lemmatization</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🧠 Hindi NLP
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../pages/introduction.html">Documentation</a></li>
+
+<li><a href="../concepts/preprocessing.html">Concepts</a></li>
+
+<li><a href="index.html" class="active">Comparisons</a></li>
+
+<li><a href="../applications/search-engine.html">Applications</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>⚖️ Stemming vs Lemmatization</h1>
+
+<p>
+
+Compare two important text preprocessing techniques used in
+Natural Language Processing for reducing words to their base forms.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📖 Overview</h2>
+
+<p>
+
+Both <strong>Stemming</strong> and <strong>Lemmatization</strong> are text preprocessing
+techniques used to reduce different forms of words into a common base form.
+Their primary goal is to reduce vocabulary size and improve the efficiency of
+Natural Language Processing systems.
+
+</p>
+
+<p>
+
+Although both techniques perform similar tasks, they differ significantly in
+their working mechanism, computational complexity, output quality, and
+accuracy.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= COMPARISON TABLE ================= -->
+
+<section class="container">
+
+<h2>📊 Comparison Table</h2>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+
+<th>Parameter</th>
+
+<th>Stemming</th>
+
+<th>Lemmatization</th>
+
+</tr>
+
+<tr>
+
+<td>Definition</td>
+
+<td>Reduces words by removing prefixes and suffixes.</td>
+
+<td>Converts words into meaningful dictionary forms.</td>
+
+</tr>
+
+<tr>
+
+<td>Working Mechanism</td>
+
+<td>Rule-based truncation.</td>
+
+<td>Vocabulary, grammar, and linguistic analysis.</td>
+
+</tr>
+
+<tr>
+
+<td>Output Quality</td>
+
+<td>May produce non-dictionary words.</td>
+
+<td>Produces meaningful dictionary words.</td>
+
+</tr>
+
+<tr>
+
+<td>Example</td>
+
+<td>खेलते → खेल</td>
+
+<td>लड़कों → लड़का</td>
+
+</tr>
+
+<tr>
+
+<td>Computational Complexity</td>
+
+<td>Low</td>
+
+<td>High</td>
+
+</tr>
+
+<tr>
+
+<td>Processing Speed</td>
+
+<td>Fast</td>
+
+<td>Slow</td>
+
+</tr>
+
+<tr>
+
+<td>Accuracy</td>
+
+<td>Moderate</td>
+
+<td>High</td>
+
+</tr>
+
+<tr>
+
+<td>Context Awareness</td>
+
+<td>No</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>Resource Requirement</td>
+
+<td>Minimal</td>
+
+<td>Requires dictionaries and linguistic resources.</td>
+
+</tr>
+
+<tr>
+
+<td>Suitability for Hindi Text Classification</td>
+
+<td>Useful when processing speed is important.</td>
+
+<td>Preferred when accuracy and meaning preservation are important.</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- ================= STRENGTHS ================= -->
+
+<section class="container">
+
+<div class="grid">
+
+<div class="card">
+
+<h2>✅ Strengths of Stemming</h2>
+
+<ul>
+
+<li>Simple and easy to implement.</li>
+
+<li>Fast processing.</li>
+
+<li>Reduces vocabulary size effectively.</li>
+
+<li>Suitable for large datasets.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>❌ Weaknesses of Stemming</h2>
+
+<ul>
+
+<li>Can generate invalid words.</li>
+
+<li>May remove too much information.</li>
+
+<li>Lower linguistic accuracy.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>✅ Strengths of Lemmatization</h2>
+
+<ul>
+
+<li>Preserves semantic meaning.</li>
+
+<li>Produces valid dictionary words.</li>
+
+<li>Improves feature quality.</li>
+
+<li>Higher classification accuracy.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>❌ Weaknesses of Lemmatization</h2>
+
+<ul>
+
+<li>Requires more computational resources.</li>
+
+<li>More complex implementation.</li>
+
+<li>Slower than stemming.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONCLUSION ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📌 Conclusion</h2>
+
+<p>
+
+For <strong>Hindi Text Classification</strong>,
+<strong>Lemmatization</strong> generally produces better results because Hindi
+contains many grammatical variations.
+
+</p>
+
+<p>
+
+Although <strong>Stemming</strong> is faster and computationally cheaper,
+<strong>Lemmatization</strong> preserves word meaning more effectively and
+usually improves classification accuracy.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<section class="container">
+
+<div class="page-navigation">
+
+<a href="../concepts/language-models.html" class="btn">
+⬅ Previous
+</a>
+
+<a href="index.html" class="btn secondary">
+📊 All Comparisons
+</a>
+
+<a href="tf-vs-tfidf.html" class="btn">
+Next ➜
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Hindi Text Classification using Natural Language Processing
+
+</p>
+
+<p>
+
+Developed by <strong>Mayank & Mohit</strong>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

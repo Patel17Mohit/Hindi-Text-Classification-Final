@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TF vs TF-IDF</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🧠 Hindi NLP
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../pages/introduction.html">Documentation</a></li>
+
+<li><a href="../concepts/feature-engineering.html">Concepts</a></li>
+
+<li><a href="index.html" class="active">Comparisons</a></li>
+
+<li><a href="../applications/search-engine.html">Applications</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>📊 TF vs TF-IDF</h1>
+
+<p>
+
+Compare two important feature engineering techniques used to convert text into
+numerical representations for Natural Language Processing.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📖 Overview</h2>
+
+<p>
+
+<strong>Term Frequency (TF)</strong> and
+<strong>Term Frequency-Inverse Document Frequency (TF-IDF)</strong>
+are popular feature engineering techniques used to represent textual data numerically.
+
+</p>
+
+<p>
+
+Both methods measure the importance of words in a document, but
+<strong>TF-IDF</strong> provides a more informative weighting mechanism by
+considering both word frequency and uniqueness across a collection of documents.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= COMPARISON TABLE ================= -->
+
+<section class="container">
+
+<h2>📊 Comparison Table</h2>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+
+<th>Parameter</th>
+
+<th>TF (Term Frequency)</th>
+
+<th>TF-IDF</th>
+
+</tr>
+
+<tr>
+
+<td>Definition</td>
+
+<td>Counts how often a word appears in a document.</td>
+
+<td>Combines word frequency with rarity across documents.</td>
+
+</tr>
+
+<tr>
+
+<td>Working Mechanism</td>
+
+<td>Uses only local document frequency.</td>
+
+<td>Uses both local and global document frequency.</td>
+
+</tr>
+
+<tr>
+
+<td>Importance Measurement</td>
+
+<td>Frequency-based.</td>
+
+<td>Frequency and uniqueness-based.</td>
+
+</tr>
+
+<tr>
+
+<td>Common Word Handling</td>
+
+<td>Common words receive high importance.</td>
+
+<td>Common words receive lower importance.</td>
+
+</tr>
+
+<tr>
+
+<td>Computational Complexity</td>
+
+<td>Low</td>
+
+<td>Moderate</td>
+
+</tr>
+
+<tr>
+
+<td>Accuracy</td>
+
+<td>Moderate</td>
+
+<td>High</td>
+
+</tr>
+
+<tr>
+
+<td>Feature Quality</td>
+
+<td>Basic numerical representation.</td>
+
+<td>More informative feature representation.</td>
+
+</tr>
+
+<tr>
+
+<td>Noise Reduction</td>
+
+<td>Poor</td>
+
+<td>Better</td>
+
+</tr>
+
+<tr>
+
+<td>Suitability for Classification</td>
+
+<td>Acceptable</td>
+
+<td>Highly suitable</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- ================= EXAMPLE ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>💡 Example</h2>
+
+<p>
+
+Consider two document categories:
+
+</p>
+
+<h3>🏏 Sports Articles</h3>
+
+<ul>
+
+<li>क्रिकेट</li>
+
+<li>बल्लेबाज</li>
+
+<li>विकेट</li>
+
+</ul>
+
+<h3>🏛 Politics Articles</h3>
+
+<ul>
+
+<li>चुनाव</li>
+
+<li>संसद</li>
+
+<li>मंत्री</li>
+
+</ul>
+
+<p>
+
+Using <strong>TF</strong>, frequently occurring words receive high scores,
+even if they appear in many documents.
+
+</p>
+
+<p>
+
+Using <strong>TF-IDF</strong>, category-specific words such as
+<strong>"क्रिकेट"</strong> and
+<strong>"चुनाव"</strong>
+receive higher weights because they are frequent within their category but
+rare across other categories.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= STRENGTHS & WEAKNESSES ================= -->
+
+<section class="container">
+
+<div class="grid">
+
+<div class="card">
+
+<h2>✅ Strengths of TF</h2>
+
+<ul>
+
+<li>Easy to calculate.</li>
+
+<li>Computationally efficient.</li>
+
+<li>Suitable for basic text analysis.</li>
+
+<li>Simple implementation.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>❌ Weaknesses of TF</h2>
+
+<ul>
+
+<li>Cannot distinguish informative and non-informative words.</li>
+
+<li>Common words may dominate feature values.</li>
+
+<li>Less effective for classification.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>✅ Strengths of TF-IDF</h2>
+
+<ul>
+
+<li>Highlights meaningful terms.</li>
+
+<li>Improves classification performance.</li>
+
+<li>Reduces influence of common words.</li>
+
+<li>Produces better feature vectors.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>❌ Weaknesses of TF-IDF</h2>
+
+<ul>
+
+<li>Does not capture semantic meaning.</li>
+
+<li>Ignores word order.</li>
+
+<li>Cannot understand context.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONCLUSION ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📌 Conclusion</h2>
+
+<p>
+
+For <strong>Hindi Text Classification</strong>,
+<strong>TF-IDF</strong> is generally preferred over
+<strong>Term Frequency (TF)</strong> because it identifies
+category-specific words more effectively.
+
+</p>
+
+<p>
+
+Although TF is simple and computationally efficient,
+TF-IDF produces richer numerical representations and usually improves
+classification accuracy by assigning greater importance to informative words.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<section class="container">
+
+<div class="page-navigation">
+
+<a href="stemming-vs-lemmatization.html" class="btn">
+
+⬅ Previous
+
+</a>
+
+<a href="index.html" class="btn secondary">
+
+📊 All Comparisons
+
+</a>
+
+<a href="word2vec-vs-fasttext.html" class="btn">
+
+Next ➜
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Hindi Text Classification using Natural Language Processing
+
+</p>
+
+<p>
+
+Developed by <strong>Mayank & Mohit</strong>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

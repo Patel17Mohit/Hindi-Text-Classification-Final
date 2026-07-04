@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complete Text Preprocessing Pipeline</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🧠 Hindi NLP
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../pages/introduction.html">Documentation</a></li>
+
+<li><a href="../concepts/preprocessing.html">Concepts</a></li>
+
+<li><a href="preprocessing.html" class="active">Workflows</a></li>
+
+<li><a href="../applications/search-engine.html">Applications</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>⚙️ Complete Text Preprocessing Pipeline</h1>
+
+<p>
+
+Understand the complete workflow of preprocessing Hindi text before
+performing feature engineering and text classification.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= DIAGRAM ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>🖼 Workflow Diagram</h2>
+
+<img src="../images/workflow 1.jpg"
+alt="Complete Text Preprocessing Pipeline"
+class="workflow-image">
+
+<p class="image-caption">
+
+Figure 1: Complete Text Preprocessing Pipeline for Hindi Text Classification
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= EXPLANATION ================= -->
+
+<section class="container">
+
+<h2>📖 Workflow Explanation</h2>
+
+<!-- Step 1 -->
+
+<div class="card">
+
+<h3>Step 1: Raw Hindi Text</h3>
+
+<p>
+
+This is the original text collected from various sources such as:
+
+</p>
+
+<ul>
+
+<li>News Articles</li>
+
+<li>Blogs</li>
+
+<li>Social Media Posts</li>
+
+<li>Government Documents</li>
+
+</ul>
+
+<h4>Example</h4>
+
+<blockquote>
+
+"भारत ने विश्व कप में शानदार जीत हासिल की है!!! 😊"
+
+</blockquote>
+
+</div>
+
+<!-- Step 2 -->
+
+<div class="card">
+
+<h3>Step 2: Sentence Segmentation</h3>
+
+<p>
+
+The document is divided into individual sentences so that each sentence
+can be processed independently.
+
+</p>
+
+<h4>Example</h4>
+
+<blockquote>
+
+भारत ने विश्व कप में शानदार जीत हासिल की है।
+
+<br><br>
+
+पूरे देश में खुशी का माहौल है।
+
+</blockquote>
+
+</div>
+
+<!-- Step 3 -->
+
+<div class="card">
+
+<h3>Step 3: Tokenization</h3>
+
+<p>
+
+Each sentence is divided into individual words called <strong>tokens</strong>.
+
+</p>
+
+<h4>Example</h4>
+
+<blockquote>
+
+भारत | ने | विश्व | कप | में | शानदार | जीत | हासिल | की
+
+</blockquote>
+
+</div>
+
+<!-- Step 4 -->
+
+<div class="card">
+
+<h3>Step 4: Case Normalization</h3>
+
+<p>
+
+English words appearing in Hindi text are converted into a consistent
+format.
+
+</p>
+
+<h4>Example</h4>
+
+<blockquote>
+
+"NLP", "nlp", "Nlp"
+
+<br><br>
+
+⬇
+
+<br><br>
+
+"nlp"
+
+</blockquote>
+
+<p>
+
+This ensures consistency throughout the dataset.
+
+</p>
+
+</div>
+
+<!-- Step 5 -->
+
+<div class="card">
+
+<h3>Step 5: Noise Removal</h3>
+
+<p>
+
+Unwanted elements are removed, including:
+
+</p>
+
+<ul>
+
+<li>Emojis</li>
+
+<li>URLs</li>
+
+<li>Hashtags</li>
+
+<li>Special Characters</li>
+
+<li>Extra Spaces</li>
+
+</ul>
+
+<h4>Example</h4>
+
+<blockquote>
+
+भारत ने मैच जीता!!! 😊
+
+<br><br>
+
+⬇
+
+<br><br>
+
+भारत ने मैच जीता
+
+</blockquote>
+
+</div>
+
+<!-- Step 6 -->
+
+<div class="card">
+
+<h3>Step 6: Text Cleaning</h3>
+
+<p>
+
+Additional cleaning and formatting operations are performed to produce
+standardized and machine-readable text.
+
+</p>
+
+</div>
+
+<!-- Step 7 -->
+
+<div class="card">
+
+<h3>Step 7: Stop-word Removal</h3>
+
+<p>
+
+Frequently occurring words that contribute little meaning are removed.
+
+</p>
+
+<h4>Example</h4>
+
+<strong>Original:</strong>
+
+<blockquote>
+
+भारत ने क्रिकेट मैच में शानदार जीत हासिल की है
+
+</blockquote>
+
+<strong>After Stop-word Removal:</strong>
+
+<blockquote>
+
+भारत क्रिकेट मैच शानदार जीत हासिल
+
+</blockquote>
+
+</div>
+
+<!-- Step 8 -->
+
+<div class="card">
+
+<h3>Step 8: Stemming / Lemmatization</h3>
+
+<p>
+
+Words are converted into their root or dictionary forms to reduce
+vocabulary size.
+
+</p>
+
+<h4>Examples</h4>
+
+<blockquote>
+
+खेलते → खेल
+
+<br><br>
+
+बच्चों → बच्चा
+
+</blockquote>
+
+</div>
+
+<!-- Step 9 -->
+
+<div class="card">
+
+<h3>Step 9: Processed Text</h3>
+
+<p>
+
+The final cleaned text is now ready for feature engineering
+and machine learning algorithms.
+
+</p>
+
+<h4>Example</h4>
+
+<blockquote>
+
+भारत क्रिकेट मैच शानदार जीत
+
+</blockquote>
+
+</div>
+
+</section>
+
+<!-- ================= IMPORTANCE ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>⭐ Importance</h2>
+
+<p>
+
+The Complete Text Preprocessing Pipeline removes noise,
+standardizes textual data, reduces vocabulary size,
+and prepares high-quality input for feature engineering
+and classification models.
+
+</p>
+
+<p>
+
+Effective preprocessing significantly improves the performance,
+accuracy, and efficiency of Hindi Text Classification systems.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<section class="container">
+
+<div class="page-navigation">
+
+<a href="../concepts/preprocessing.html" class="btn">
+
+⬅ Previous
+
+</a>
+
+<a href="../index.html" class="btn secondary">
+
+🏠 Home
+
+</a>
+
+<a href="feature-engineering.html" class="btn">
+
+Next ➜
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Hindi Text Classification using Natural Language Processing
+
+</p>
+
+<p>
+
+Developed by <strong>Mayank & Mohit</strong>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

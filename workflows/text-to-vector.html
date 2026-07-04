@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Text-to-Vector Transformation Process</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🧠 Hindi NLP
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../pages/introduction.html">Documentation</a></li>
+
+<li><a href="../concepts/language-representation.html">Concepts</a></li>
+
+<li><a href="language-representation.html" class="active">Workflows</a></li>
+
+<li><a href="../applications/search-engine.html">Applications</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>🔤 Text-to-Vector Transformation Process</h1>
+
+<p>
+
+Learn how processed Hindi text is transformed into numerical vector
+representations that machine learning and deep learning models can
+understand.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= DIAGRAM ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>🖼 Workflow Diagram</h2>
+
+<img src="../images/workflow 3.jpg"
+alt="Text-to-Vector Transformation Process"
+class="workflow-image">
+
+<p class="image-caption">
+
+Figure 3: Text-to-Vector Transformation Process for Hindi Text Classification
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= EXPLANATION ================= -->
+
+<section class="container">
+
+<h2>📖 Workflow Explanation</h2>
+
+<!-- Step 1 -->
+
+<div class="card">
+
+<h3>Step 1: Processed Text</h3>
+
+<p>
+
+The cleaned text obtained after preprocessing becomes the input for
+language representation.
+
+</p>
+
+<h4>Example</h4>
+
+<blockquote>
+
+भारत क्रिकेट मैच जीता
+
+</blockquote>
+
+</div>
+
+<!-- Step 2 -->
+
+<div class="card">
+
+<h3>Step 2: Token Generation</h3>
+
+<p>
+
+The sentence is divided into individual words called tokens.
+
+</p>
+
+<h4>Tokens</h4>
+
+<ul>
+
+<li>भारत</li>
+
+<li>क्रिकेट</li>
+
+<li>मैच</li>
+
+<li>जीता</li>
+
+</ul>
+
+</div>
+
+<!-- Step 3 -->
+
+<div class="card">
+
+<h3>Step 3: One-Hot Encoding</h3>
+
+<p>
+
+Each word is converted into a binary vector based on the vocabulary.
+
+</p>
+
+<h4>Example Vocabulary</h4>
+
+<blockquote>
+
+[भारत, क्रिकेट, चुनाव]
+
+</blockquote>
+
+<h4>Vector Representation</h4>
+
+<blockquote>
+
+क्रिकेट
+
+<br><br>
+
+⬇
+
+<br><br>
+
+[0,1,0]
+
+</blockquote>
+
+<p>
+
+This representation is simple but does not capture semantic meaning.
+
+</p>
+
+</div>
+
+<!-- Step 4 -->
+
+<div class="card">
+
+<h3>Step 4: Word Embeddings</h3>
+
+<p>
+
+Words are converted into dense numerical vectors that capture semantic
+relationships.
+
+</p>
+
+<h4>Example</h4>
+
+<ul>
+
+<li>क्रिकेट</li>
+
+<li>खिलाड़ी</li>
+
+<li>मैच</li>
+
+</ul>
+
+<p>
+
+These words become close together in vector space because they are
+semantically related.
+
+</p>
+
+</div>
+
+<!-- Step 5 -->
+
+<div class="card">
+
+<h3>Step 5: Word2Vec / FastText</h3>
+
+<h4>Word2Vec</h4>
+
+<p>
+
+Learns semantic relationships between words.
+
+</p>
+
+<blockquote>
+
+राजा − पुरुष + महिला ≈ रानी
+
+</blockquote>
+
+<h4>FastText</h4>
+
+<p>
+
+Uses character-level subword information.
+
+</p>
+
+<p>
+
+FastText performs exceptionally well for Hindi because it effectively
+handles prefixes, suffixes, and rich word morphology.
+
+</p>
+
+</div>
+
+<!-- Step 6 -->
+
+<div class="card">
+
+<h3>Step 6: Contextual Embeddings</h3>
+
+<p>
+
+Modern transformer models such as <strong>BERT</strong> generate
+context-aware representations of words.
+
+</p>
+
+<h4>Example</h4>
+
+<p>
+
+The word:
+
+</p>
+
+<blockquote>
+
+"बैंक"
+
+</blockquote>
+
+<p>
+
+can refer to:
+
+</p>
+
+<ul>
+
+<li>River Bank</li>
+
+<li>Financial Bank</li>
+
+</ul>
+
+<p>
+
+The correct meaning is determined using the surrounding context.
+
+</p>
+
+</div>
+
+<!-- Step 7 -->
+
+<div class="card">
+
+<h3>Step 7: Dense Vector Representation</h3>
+
+<p>
+
+After embedding, every document is represented as a dense numerical
+vector.
+
+</p>
+
+<h4>Example</h4>
+
+<blockquote>
+
+[0.23, 0.76, 0.44, 0.91, ...]
+
+</blockquote>
+
+<p>
+
+These vectors capture semantic information that machine learning models
+can process efficiently.
+
+</p>
+
+</div>
+
+<!-- Step 8 -->
+
+<div class="card">
+
+<h3>Step 8: Classification Model</h3>
+
+<p>
+
+The generated vectors are supplied as input to machine learning
+algorithms.
+
+</p>
+
+<h4>Common Algorithms</h4>
+
+<ul>
+
+<li>Naïve Bayes</li>
+
+<li>Logistic Regression</li>
+
+<li>Support Vector Machine (SVM)</li>
+
+<li>Random Forest</li>
+
+</ul>
+
+<p>
+
+These algorithms learn patterns from the vector representations to
+predict document categories.
+
+</p>
+
+</div>
+
+<!-- Step 9 -->
+
+<div class="card">
+
+<h3>Step 9: Predicted Category</h3>
+
+<p>
+
+The trained model predicts the category of unseen Hindi text.
+
+</p>
+
+<h4>Example 1</h4>
+
+<blockquote>
+
+Input:
+
+<br><br>
+
+"भारतीय टीम ने विश्व कप जीत लिया"
+
+<br><br>
+
+Output:
+
+<br><br>
+
+✅ Sports
+
+</blockquote>
+
+<h4>Example 2</h4>
+
+<blockquote>
+
+Input:
+
+<br><br>
+
+"सरकार ने नया विधेयक पारित किया"
+
+<br><br>
+
+Output:
+
+<br><br>
+
+✅ Politics
+
+</blockquote>
+
+</div>
+
+</section>
+
+<!-- ================= IMPORTANCE ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>⭐ Importance</h2>
+
+<p>
+
+The Text-to-Vector Transformation Process converts human-readable Hindi
+text into meaningful numerical representations that capture semantic
+relationships and contextual information.
+
+</p>
+
+<p>
+
+These vector representations enable machine learning and deep learning
+models to accurately classify documents into categories such as Sports,
+Politics, Business, and Entertainment.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<section class="container">
+
+<div class="page-navigation">
+
+<a href="feature-engineering.html" class="btn">
+
+⬅ Previous
+
+</a>
+
+<a href="../index.html" class="btn secondary">
+
+🏠 Home
+
+</a>
+
+<a href="classification-pipeline.html" class="btn">
+
+Next ➜
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Hindi Text Classification using Natural Language Processing
+
+</p>
+
+<p>
+
+Developed by <strong>Mayank & Mohit</strong>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Methodology</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🧠 Hindi NLP
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="methodology.html" class="active">Methodology</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>⚙️ Methodology</h1>
+
+<p>
+
+This project follows a systematic workflow to explain how
+<strong>Hindi Text Classification</strong> can be performed using
+Natural Language Processing (NLP) techniques.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= INTRODUCTION ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📖 Overview</h2>
+
+<p>
+
+The methodology demonstrates the complete pipeline of Hindi Text
+Classification, beginning with data collection and ending with model
+evaluation. Each stage plays an important role in converting raw Hindi
+text into meaningful information that can be classified accurately.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= STEP 1 ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📂 Step 1: Data Collection</h2>
+
+<p>
+
+The first step is to collect a dataset containing Hindi text from
+publicly available and reliable sources.
+
+</p>
+
+<h3>📚 Common Data Sources</h3>
+
+<ul>
+
+<li>Hindi News Dataset</li>
+
+<li>BBC Hindi News</li>
+
+<li>Kaggle Hindi Dataset</li>
+
+<li>AI4Bharat Datasets</li>
+
+</ul>
+
+<p>
+
+The collected dataset contains text belonging to different categories
+such as:
+
+</p>
+
+<ul>
+
+<li>🏏 Sports</li>
+
+<li>🏛️ Politics</li>
+
+<li>🎬 Entertainment</li>
+
+<li>💼 Business</li>
+
+<li>💻 Technology</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================= STEP 2 ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>🧹 Step 2: Text Preprocessing</h2>
+
+<p>
+
+Raw text usually contains unnecessary information that must be cleaned
+before it can be processed by machine learning models.
+
+</p>
+
+<h3>Preprocessing Techniques</h3>
+
+<ul>
+
+<li>Sentence Segmentation</li>
+
+<li>Tokenization</li>
+
+<li>Case Normalization</li>
+
+<li>Stop-word Removal</li>
+
+<li>Noise Removal</li>
+
+<li>Text Cleaning</li>
+
+<li>Stemming</li>
+
+<li>Lemmatization</li>
+
+</ul>
+
+<h3>📝 Example</h3>
+
+<p><strong>Raw Sentence</strong></p>
+
+<blockquote>
+
+भारत ने क्रिकेट मैच शानदार तरीके से जीत लिया।
+
+</blockquote>
+
+<p><strong>Processed Tokens</strong></p>
+
+<blockquote>
+
+भारत | क्रिकेट | मैच | शानदार | जीत
+
+</blockquote>
+
+</div>
+
+</section>
+
+<!-- ================= STEP 3 ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📊 Step 3: Feature Engineering</h2>
+
+<p>
+
+After preprocessing, textual data is converted into numerical features
+that machine learning algorithms can understand.
+
+</p>
+
+<h3>Techniques Used</h3>
+
+<ul>
+
+<li>Bag of Words (BoW)</li>
+
+<li>N-Grams</li>
+
+<li>Term Frequency (TF)</li>
+
+<li>Inverse Document Frequency (IDF)</li>
+
+<li>TF-IDF</li>
+
+</ul>
+
+<p>
+
+These techniques identify important words and represent documents as
+feature vectors suitable for classification.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= STEP 4 ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>🔤 Step 4: Language Representation</h2>
+
+<p>
+
+Modern NLP models represent words using dense vectors that capture
+semantic relationships between words and improve classification
+performance.
+
+</p>
+
+<h3>Language Representation Techniques</h3>
+
+<ul>
+
+<li>One-Hot Encoding</li>
+
+<li>Word Embeddings</li>
+
+<li>Word2Vec</li>
+
+<li>FastText</li>
+
+<li>Contextual Embeddings</li>
+
+</ul>
+
+<p>
+
+These methods help machines understand word similarity, context, and
+meaning rather than treating words as isolated units.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= STEP 5 ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>🤖 Step 5: Text Classification</h2>
+
+<p>
+
+The generated feature vectors are provided as input to a classification
+model. The model analyzes the features and predicts the appropriate
+category for the given Hindi text.
+
+</p>
+
+<h3>📝 Example</h3>
+
+<p><strong>Input</strong></p>
+
+<blockquote>
+
+नई फिल्म अगले सप्ताह रिलीज होगी।
+
+</blockquote>
+
+<p><strong>Prediction</strong></p>
+
+<blockquote>
+
+✅ Entertainment
+
+</blockquote>
+
+</div>
+
+</section>
+
+<!-- ================= WORKFLOW ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>🔄 Overall Workflow</h2>
+
+<pre>
+
+Hindi Dataset
+      │
+      ▼
+Text Cleaning
+      │
+      ▼
+Sentence Segmentation
+      │
+      ▼
+Tokenization
+      │
+      ▼
+Stop-word Removal
+      │
+      ▼
+Stemming / Lemmatization
+      │
+      ▼
+Feature Engineering (TF-IDF)
+      │
+      ▼
+Language Representation
+      │
+      ▼
+Text Classification Model
+      │
+      ▼
+Predicted Category
+
+</pre>
+
+</div>
+
+</section>
+
+<!-- ================= EVALUATION ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📈 Model Evaluation</h2>
+
+<p>
+
+After classification, the model's performance is evaluated using
+standard machine learning metrics to determine its effectiveness.
+
+</p>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🎯 Accuracy</h3>
+
+<p>
+
+Measures the percentage of correctly classified documents.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>✅ Precision</h3>
+
+<p>
+
+Measures how many predicted categories are actually correct.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🔍 Recall</h3>
+
+<p>
+
+Measures how many relevant documents are successfully identified.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📊 F1-Score</h3>
+
+<p>
+
+Balances Precision and Recall to provide an overall performance score.
+
+</p>
+
+</div>
+
+</div>
+
+<p>
+
+These evaluation metrics help determine how effectively the model
+classifies Hindi text and identify areas for further improvement.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Hindi Text Classification using Natural Language Processing
+
+</p>
+
+<p>
+
+Developed by <strong>Mayank & Mohit</strong>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Feature Engineering Pipeline</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🧠 Hindi NLP
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../pages/introduction.html">Documentation</a></li>
+
+<li><a href="../concepts/feature-engineering.html">Concepts</a></li>
+
+<li><a href="feature-engineering.html" class="active">Workflows</a></li>
+
+<li><a href="../applications/search-engine.html">Applications</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>📊 Feature Engineering Pipeline</h1>
+
+<p>
+
+Learn how processed Hindi text is transformed into numerical features
+that machine learning algorithms can understand and use for
+classification.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= DIAGRAM ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>🖼 Workflow Diagram</h2>
+
+<img src="../images/workflow 2.jpg"
+alt="Feature Engineering Pipeline"
+class="workflow-image">
+
+<p class="image-caption">
+
+Figure 2: Feature Engineering Pipeline for Hindi Text Classification
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= EXPLANATION ================= -->
+
+<section class="container">
+
+<h2>📖 Workflow Explanation</h2>
+
+<!-- Step 1 -->
+
+<div class="card">
+
+<h3>Step 1: Processed Text</h3>
+
+<p>
+
+The input to Feature Engineering is the cleaned and preprocessed text
+obtained after completing all preprocessing steps.
+
+</p>
+
+<h4>Example</h4>
+
+<blockquote>
+
+भारत क्रिकेट मैच शानदार जीत
+
+</blockquote>
+
+</div>
+
+<!-- Step 2 -->
+
+<div class="card">
+
+<h3>Step 2: Vocabulary Creation</h3>
+
+<p>
+
+A vocabulary is created by collecting all unique words from the dataset.
+
+</p>
+
+<h4>Example Vocabulary</h4>
+
+<ul>
+
+<li>भारत</li>
+
+<li>क्रिकेट</li>
+
+<li>मैच</li>
+
+<li>जीत</li>
+
+<li>शानदार</li>
+
+</ul>
+
+</div>
+
+<!-- Step 3 -->
+
+<div class="card">
+
+<h3>Step 3: Bag of Words (BoW)</h3>
+
+<p>
+
+The frequency of each vocabulary word is counted to create a numerical
+representation of the document.
+
+</p>
+
+<table>
+
+<tr>
+
+<th>Word</th>
+
+<th>Count</th>
+
+</tr>
+
+<tr>
+
+<td>भारत</td>
+
+<td>1</td>
+
+</tr>
+
+<tr>
+
+<td>क्रिकेट</td>
+
+<td>1</td>
+
+</tr>
+
+<tr>
+
+<td>मैच</td>
+
+<td>1</td>
+
+</tr>
+
+<tr>
+
+<td>जीत</td>
+
+<td>1</td>
+
+</tr>
+
+</table>
+
+<p>
+
+The document is now represented as numbers instead of text.
+
+</p>
+
+</div>
+
+<!-- Step 4 -->
+
+<div class="card">
+
+<h3>Step 4: N-Grams</h3>
+
+<p>
+
+Word sequences are generated to preserve local context.
+
+</p>
+
+<h4>Unigrams</h4>
+
+<ul>
+
+<li>क्रिकेट</li>
+
+<li>मैच</li>
+
+<li>जीत</li>
+
+</ul>
+
+<h4>Bigrams</h4>
+
+<ul>
+
+<li>क्रिकेट मैच</li>
+
+<li>मैच जीत</li>
+
+</ul>
+
+<p>
+
+N-Grams capture relationships between neighboring words.
+
+</p>
+
+</div>
+
+<!-- Step 5 -->
+
+<div class="card">
+
+<h3>Step 5: Term Frequency (TF)</h3>
+
+<p>
+
+TF measures how frequently a word appears within a document.
+
+</p>
+
+<h4>Example</h4>
+
+<blockquote>
+
+If "क्रिकेट" appears 8 times,
+
+<br><br>
+
+<strong>TF = High</strong>
+
+</blockquote>
+
+</div>
+
+<!-- Step 6 -->
+
+<div class="card">
+
+<h3>Step 6: Inverse Document Frequency (IDF)</h3>
+
+<p>
+
+IDF measures how unique a word is across the entire document collection.
+
+</p>
+
+<h4>Example</h4>
+
+<blockquote>
+
+"क्रिकेट"
+
+<br><br>
+
+Appears mainly in sports articles.
+
+<br><br>
+
+<strong>High IDF Score</strong>
+
+</blockquote>
+
+</div>
+
+<!-- Step 7 -->
+
+<div class="card">
+
+<h3>Step 7: TF-IDF</h3>
+
+<p>
+
+TF and IDF are combined to assign importance to each word.
+
+</p>
+
+<h4>Formula</h4>
+
+<blockquote>
+
+<strong>TF-IDF = TF × IDF</strong>
+
+</blockquote>
+
+<p>
+
+Words that are frequent within a document but rare across other
+documents receive higher weights.
+
+</p>
+
+</div>
+
+<!-- Step 8 -->
+
+<div class="card">
+
+<h3>Step 8: Feature Matrix</h3>
+
+<p>
+
+The final numerical representation is generated and supplied as input
+to machine learning algorithms.
+
+</p>
+
+<table>
+
+<tr>
+
+<th>Word</th>
+
+<th>Weight</th>
+
+</tr>
+
+<tr>
+
+<td>क्रिकेट</td>
+
+<td>0.85</td>
+
+</tr>
+
+<tr>
+
+<td>मैच</td>
+
+<td>0.73</td>
+
+</tr>
+
+<tr>
+
+<td>जीत</td>
+
+<td>0.69</td>
+
+</tr>
+
+</table>
+
+<p>
+
+This feature matrix is used for training and predicting document
+categories.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= IMPORTANCE ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>⭐ Importance</h2>
+
+<p>
+
+Feature Engineering converts textual information into meaningful
+numerical representations that machine learning algorithms can
+process efficiently.
+
+</p>
+
+<p>
+
+Techniques such as Bag of Words, N-Grams, TF, IDF, and TF-IDF help
+highlight informative words, improve feature quality, and increase
+the accuracy of Hindi Text Classification systems.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<section class="container">
+
+<div class="page-navigation">
+
+<a href="preprocessing.html" class="btn">
+
+⬅ Previous
+
+</a>
+
+<a href="../index.html" class="btn secondary">
+
+🏠 Home
+
+</a>
+
+<a href="language-representation.html" class="btn">
+
+Next ➜
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Hindi Text Classification using Natural Language Processing
+
+</p>
+
+<p>
+
+Developed by <strong>Mayank & Mohit</strong>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

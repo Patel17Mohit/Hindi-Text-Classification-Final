@@ -1,0 +1,544 @@
+/* ==========================================
+   CARDS
+   Hindi NLP Documentation Website
+========================================== */
+
+/* ================= SECTION ================= */
+
+.cards-section{
+
+    padding:80px 0;
+
+    background:#f8fafc;
+
+}
+
+/* ================= GRID ================= */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+/* ================= DEFAULT CARD ================= */
+
+.card{
+
+    background:#ffffff;
+
+    border-radius:20px;
+
+    padding:30px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.08);
+
+    transition:all .35s ease;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:1px solid #e5e7eb;
+
+}
+
+/* ================= HOVER ================= */
+
+.card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 20px 45px rgba(37,99,235,.18);
+
+}
+
+/* ================= TOP BORDER ================= */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+}
+
+/* ================= ICON ================= */
+
+.card-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:18px;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:2rem;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    margin-bottom:25px;
+
+}
+
+/* ================= CARD TITLE ================= */
+
+.card h2{
+
+    font-size:1.8rem;
+
+    margin-bottom:15px;
+
+    color:var(--dark);
+
+}
+
+.card h3{
+
+    font-size:1.35rem;
+
+    margin-bottom:15px;
+
+    color:var(--primary);
+
+}
+
+.card h4{
+
+    margin-bottom:12px;
+
+    color:var(--dark);
+
+}
+
+/* ================= PARAGRAPH ================= */
+
+.card p{
+
+    color:var(--gray);
+
+    line-height:1.8;
+
+    margin-bottom:15px;
+
+}
+
+/* ================= LIST ================= */
+
+.card ul{
+
+    margin-top:15px;
+
+    padding-left:20px;
+
+}
+
+.card li{
+
+    margin-bottom:10px;
+
+    color:var(--gray);
+
+}
+
+/* ================= TABLE ================= */
+
+.card table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:20px;
+
+}
+
+.card th{
+
+    background:var(--primary);
+
+    color:white;
+
+    padding:14px;
+
+}
+
+.card td{
+
+    padding:12px;
+
+    border-bottom:1px solid #e5e7eb;
+
+}
+
+.card tr:hover{
+
+    background:#f8fafc;
+
+}
+
+/* ================= IMAGE ================= */
+
+.card img{
+
+    width:100%;
+
+    border-radius:15px;
+
+    margin:20px 0;
+
+    transition:.4s;
+
+}
+
+.card img:hover{
+
+    transform:scale(1.03);
+
+}
+
+/* ================= CODE ================= */
+
+.card pre{
+
+    background:#0f172a;
+
+    color:white;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    overflow-x:auto;
+
+}
+
+.card code{
+
+    font-family:Consolas, monospace;
+
+}
+
+/* ================= BADGES ================= */
+
+.badge{
+
+    display:inline-block;
+
+    padding:8px 15px;
+
+    border-radius:30px;
+
+    background:#dbeafe;
+
+    color:var(--primary);
+
+    font-size:.85rem;
+
+    font-weight:600;
+
+    margin-bottom:15px;
+
+}
+
+/* ================= TAGS ================= */
+
+.tags{
+
+    margin-top:20px;
+
+}
+
+.tags span{
+
+    display:inline-block;
+
+    padding:8px 15px;
+
+    margin:5px;
+
+    border-radius:25px;
+
+    background:#eff6ff;
+
+    color:var(--primary);
+
+    font-size:.85rem;
+
+    transition:.3s;
+
+}
+
+.tags span:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ================= BUTTON ================= */
+
+.card .btn{
+
+    margin-top:20px;
+
+}
+
+/* ================= FEATURE CARD ================= */
+
+.feature-card{
+
+    text-align:center;
+
+}
+
+.feature-card .card-icon{
+
+    margin:auto;
+
+    margin-bottom:25px;
+
+}
+
+/* ================= COMPARISON CARD ================= */
+
+.comparison-card{
+
+    border-left:6px solid var(--primary);
+
+}
+
+/* ================= APPLICATION CARD ================= */
+
+.application-card{
+
+    border-left:6px solid #10b981;
+
+}
+
+/* ================= RESEARCH CARD ================= */
+
+.research-card{
+
+    border-left:6px solid #7c3aed;
+
+}
+
+/* ================= WORKFLOW CARD ================= */
+
+.workflow-card{
+
+    border-left:6px solid #f59e0b;
+
+}
+
+/* ================= CONCEPT CARD ================= */
+
+.concept-card{
+
+    border-left:6px solid #06b6d4;
+
+}
+
+/* ================= INFO BOX ================= */
+
+.info-box{
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    background:#eff6ff;
+
+    border-left:5px solid var(--primary);
+
+}
+
+.info-box h4{
+
+    color:var(--primary);
+
+}
+
+/* ================= WARNING BOX ================= */
+
+.warning{
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    background:#fef3c7;
+
+    border-left:5px solid #f59e0b;
+
+}
+
+/* ================= SUCCESS BOX ================= */
+
+.success{
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border-radius:15px;
+
+    background:#dcfce7;
+
+    border-left:5px solid #16a34a;
+
+}
+
+/* ================= GRID 2 ================= */
+
+.grid-2{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:30px;
+
+}
+
+/* ================= GRID 3 ================= */
+
+.grid-3{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:30px;
+
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.grid-2{
+
+    grid-template-columns:1fr;
+
+}
+
+.grid-3{
+
+    grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.grid{
+
+    grid-template-columns:1fr;
+
+}
+
+.grid-3{
+
+    grid-template-columns:1fr;
+
+}
+
+.card{
+
+    padding:25px;
+
+}
+
+.card h2{
+
+    font-size:1.6rem;
+
+}
+
+.card h3{
+
+    font-size:1.25rem;
+
+}
+
+.card-icon{
+
+    width:60px;
+
+    height:60px;
+
+    font-size:1.7rem;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.card{
+
+    padding:20px;
+
+}
+
+.card h2{
+
+    font-size:1.4rem;
+
+}
+
+.card p{
+
+    font-size:.95rem;
+
+}
+
+.card table{
+
+    display:block;
+
+    overflow-x:auto;
+
+}
+
+}

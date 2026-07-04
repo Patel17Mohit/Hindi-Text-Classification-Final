@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Language Representation</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🧠 Hindi NLP
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="../index.html">Home</a></li>
+
+            <li><a href="../pages/introduction.html">Documentation</a></li>
+
+            <li><a href="language-representation.html" class="active">Concepts</a></li>
+
+            <li><a href="../comparative-analysis/index.html">Comparisons</a></li>
+
+            <li><a href="../workflows/language-representation.html">Workflows</a></li>
+
+            <li><a href="../applications/search-engine.html">Applications</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>🤖 Language Representation</h1>
+
+        <p>
+            Language representation techniques convert words and documents
+            into numerical vectors that preserve meaning and context,
+            enabling machine learning and deep learning models to understand text.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTENT ================= -->
+
+<section class="container">
+
+<h2>Concepts Covered</h2>
+
+<ol class="concept-list">
+
+<li>One-Hot Encoding</li>
+
+<li>Word Embeddings</li>
+
+<li>Word2Vec</li>
+
+<li>FastText</li>
+
+<li>Contextual Embeddings</li>
+
+</ol>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>14. One-Hot Encoding</h2>
+
+<h3>Definition</h3>
+
+<p>
+One-Hot Encoding represents each word as a binary vector where only one element has the value <strong>1</strong> and all other elements are <strong>0</strong>.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+Convert categorical words into numerical vectors that machine learning algorithms can process.
+</p>
+
+<h3>Example</h3>
+
+<h4>Vocabulary</h4>
+
+<blockquote>
+
+क्रिकेट<br>
+
+चुनाव<br>
+
+फिल्म
+
+</blockquote>
+
+<h4>Vector Representation</h4>
+
+<blockquote>
+
+क्रिकेट → [1,0,0]<br><br>
+
+चुनाव → [0,1,0]<br><br>
+
+फिल्म → [0,0,1]
+
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Simple to implement</li>
+
+<li>Easy to interpret</li>
+
+<li>Works well for small vocabularies</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Produces sparse vectors</li>
+
+<li>Cannot capture semantic relationships</li>
+
+<li>Vocabulary size grows rapidly</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Basic Text Classification</li>
+
+<li>Machine Learning Models</li>
+
+<li>Educational NLP Projects</li>
+
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>15. Word Embeddings</h2>
+
+<h3>Definition</h3>
+
+<p>
+Word Embeddings represent words as dense numerical vectors that capture semantic relationships between words.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+Represent words based on their meanings rather than treating them as independent symbols.
+</p>
+
+<h3>Example</h3>
+
+<blockquote>
+
+राजा<br>
+
+रानी
+
+</blockquote>
+
+<p>
+These words receive similar vector representations because they are semantically related.
+</p>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Captures semantic meaning</li>
+
+<li>Dense and compact representation</li>
+
+<li>Improves classification accuracy</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Requires large training datasets</li>
+
+<li>Traditional embeddings cannot understand context</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Sentiment Analysis</li>
+
+<li>Machine Translation</li>
+
+<li>Recommendation Systems</li>
+
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>16. Word2Vec</h2>
+
+<h3>Definition</h3>
+
+<p>
+Word2Vec is a neural embedding model that learns semantic relationships between words by analyzing their surrounding context.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+Generate meaningful vector representations for words appearing in similar contexts.
+</p>
+
+<h3>Example</h3>
+
+<blockquote>
+
+राजा − पुरुष + महिला ≈ रानी
+
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Learns semantic relationships</li>
+
+<li>Produces dense vectors</li>
+
+<li>Improves NLP performance</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Cannot represent unseen words</li>
+
+<li>Generates only one vector per word regardless of context</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Text Classification</li>
+
+<li>Recommendation Systems</li>
+
+<li>Information Retrieval</li>
+
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>17. FastText</h2>
+
+<h3>Definition</h3>
+
+<p>
+FastText is an embedding model developed by Facebook that represents words using character-level subwords instead of complete words.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+Handle rare and unseen words by learning representations from character sequences.
+</p>
+
+<h3>Example</h3>
+
+<p>
+Words such as <strong>खेल</strong>, <strong>खेलना</strong>, and <strong>खेलते</strong> share common character patterns, allowing FastText to generate better embeddings.
+</p>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Excellent for morphologically rich languages</li>
+
+<li>Handles unseen words effectively</li>
+
+<li>Works exceptionally well for Hindi and other Indian languages</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Requires more computation than Word2Vec</li>
+
+<li>May generate larger models</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Hindi NLP</li>
+
+<li>Machine Translation</li>
+
+<li>Text Classification</li>
+
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>18. Contextual Embeddings</h2>
+
+<h3>Definition</h3>
+
+<p>
+Contextual Embeddings generate different vector representations for the same word depending on its surrounding context within a sentence.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+Understand the actual meaning of a word based on the sentence in which it appears.
+</p>
+
+<h3>Example</h3>
+
+<p>
+The word <strong>"बैंक"</strong> can represent different meanings depending on context:
+</p>
+
+<blockquote>
+
+• Financial Institution<br><br>
+
+• River Bank
+
+</blockquote>
+
+<p>
+Contextual embedding models determine the correct meaning using nearby words.
+</p>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Captures context and semantics</li>
+
+<li>Highly accurate representations</li>
+
+<li>State-of-the-art NLP performance</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Computationally expensive</li>
+
+<li>Requires powerful hardware</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>BERT</li>
+
+<li>GPT</li>
+
+<li>Question Answering</li>
+
+<li>Machine Translation</li>
+
+<li>Modern NLP Systems</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<section class="container">
+
+<div class="page-navigation">
+
+<a href="feature-engineering.html" class="btn">⬅ Previous</a>
+
+<a href="../index.html" class="btn secondary">🏠 Home</a>
+
+<a href="language-models.html" class="btn">Next ➜</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+© 2026 Hindi Text Classification using Natural Language Processing
+</p>
+
+<p>
+Developed by <strong>Mayank & Mohit</strong>
+</p>
+
+</footer>
+
+</body>
+
+</html>

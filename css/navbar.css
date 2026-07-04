@@ -1,0 +1,432 @@
+/* ==========================================
+   NAVBAR
+========================================== */
+
+header{
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+
+    z-index:1000;
+
+    background:rgba(255,255,255,.92);
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:0 2px 15px rgba(0,0,0,.05);
+
+    transition:.35s ease;
+
+}
+
+/* Navbar when scrolling */
+
+header.scrolled{
+
+    background:#ffffff;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.12);
+
+}
+
+/* ==========================================
+   NAVBAR CONTAINER
+========================================== */
+
+.navbar{
+
+    max-width:1200px;
+
+    margin:auto;
+
+    height:80px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 25px;
+
+}
+
+/* ==========================================
+   LOGO
+========================================== */
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:1.4rem;
+
+    font-weight:700;
+
+    color:var(--primary);
+
+}
+
+.logo img{
+
+    width:48px;
+
+    height:48px;
+
+    object-fit:contain;
+
+    border-radius:50%;
+
+}
+
+.logo span{
+
+    color:var(--dark);
+
+}
+
+/* ==========================================
+   NAV LINKS
+========================================== */
+
+.nav-links{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:28px;
+
+    list-style:none;
+
+}
+
+.nav-links li{
+
+    position:relative;
+
+}
+
+.nav-links a{
+
+    color:var(--dark);
+
+    font-weight:500;
+
+    padding:10px 0;
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+/* Hover */
+
+.nav-links a:hover{
+
+    color:var(--primary);
+
+}
+
+/* Active */
+
+.nav-links a.active{
+
+    color:var(--primary);
+
+    font-weight:600;
+
+}
+
+/* Underline Animation */
+
+.nav-links a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    transition:.35s;
+
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after{
+
+    width:100%;
+
+}
+
+/* ==========================================
+   NAV BUTTON
+========================================== */
+
+.nav-btn{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:40px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.nav-btn:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 10px 25px rgba(37,99,235,.25);
+
+}
+
+/* ==========================================
+   HAMBURGER
+========================================== */
+
+.menu-toggle{
+
+    display:none;
+
+    cursor:pointer;
+
+    flex-direction:column;
+
+    gap:6px;
+
+}
+
+.menu-toggle span{
+
+    width:28px;
+
+    height:3px;
+
+    background:var(--dark);
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+/* ==========================================
+   MOBILE MENU
+========================================== */
+
+@media(max-width:992px){
+
+.nav-links{
+
+    position:fixed;
+
+    top:80px;
+
+    right:-100%;
+
+    width:280px;
+
+    height:calc(100vh - 80px);
+
+    background:white;
+
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    padding:40px;
+
+    gap:25px;
+
+    box-shadow:-10px 0 30px rgba(0,0,0,.1);
+
+    transition:.4s;
+
+}
+
+.nav-links.active{
+
+    right:0;
+
+}
+
+.menu-toggle{
+
+    display:flex;
+
+}
+
+}
+
+/* ==========================================
+   HAMBURGER ANIMATION
+========================================== */
+
+.menu-toggle.active span:nth-child(1){
+
+    transform:rotate(45deg) translateY(12px);
+
+}
+
+.menu-toggle.active span:nth-child(2){
+
+    opacity:0;
+
+}
+
+.menu-toggle.active span:nth-child(3){
+
+    transform:rotate(-45deg) translateY(-12px);
+
+}
+
+/* ==========================================
+   SEARCH BAR (Optional)
+========================================== */
+
+.nav-search{
+
+    position:relative;
+
+}
+
+.nav-search input{
+
+    width:220px;
+
+    padding:10px 18px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:40px;
+
+    background:#f1f5f9;
+
+    transition:.3s;
+
+}
+
+.nav-search input:focus{
+
+    width:260px;
+
+    background:white;
+
+    box-shadow:0 5px 20px rgba(37,99,235,.2);
+
+}
+
+/* ==========================================
+   DROPDOWN MENU
+========================================== */
+
+.dropdown{
+
+    position:relative;
+
+}
+
+.dropdown-content{
+
+    position:absolute;
+
+    top:45px;
+
+    left:0;
+
+    background:white;
+
+    min-width:230px;
+
+    border-radius:12px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.1);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(15px);
+
+    transition:.3s;
+
+    overflow:hidden;
+
+    z-index:999;
+
+}
+
+.dropdown-content a{
+
+    display:block;
+
+    padding:14px 20px;
+
+    color:var(--dark);
+
+}
+
+.dropdown-content a:hover{
+
+    background:#eff6ff;
+
+    color:var(--primary);
+
+}
+
+.dropdown:hover .dropdown-content{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+/* ==========================================
+   NAVBAR SPACING
+========================================== */
+
+body{
+
+    padding-top:80px;
+
+}

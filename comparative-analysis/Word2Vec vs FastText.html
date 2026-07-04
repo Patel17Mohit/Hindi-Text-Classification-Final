@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Word2Vec vs FastText</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🧠 Hindi NLP
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../pages/introduction.html">Documentation</a></li>
+
+<li><a href="../concepts/language-representation.html">Concepts</a></li>
+
+<li><a href="index.html" class="active">Comparisons</a></li>
+
+<li><a href="../applications/search-engine.html">Applications</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>🤖 Word2Vec vs FastText</h1>
+
+<p>
+
+Compare two popular word embedding techniques used to represent
+words as dense numerical vectors in Natural Language Processing.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📖 Overview</h2>
+
+<p>
+
+<strong>Word2Vec</strong> and <strong>FastText</strong> are word embedding
+techniques that convert words into dense numerical vectors.
+Both methods capture semantic relationships between words,
+but <strong>FastText</strong> extends Word2Vec by learning
+representations from character-level subword information.
+
+</p>
+
+<p>
+
+This makes FastText especially effective for morphologically rich
+languages such as <strong>Hindi</strong>, where many words share
+common prefixes, suffixes, and root forms.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= COMPARISON TABLE ================= -->
+
+<section class="container">
+
+<h2>📊 Comparison Table</h2>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+
+<th>Parameter</th>
+
+<th>Word2Vec</th>
+
+<th>FastText</th>
+
+</tr>
+
+<tr>
+
+<td>Definition</td>
+
+<td>Learns word representations using neural networks.</td>
+
+<td>Learns representations using words and character n-grams.</td>
+
+</tr>
+
+<tr>
+
+<td>Working Mechanism</td>
+
+<td>Treats each word as a single unit.</td>
+
+<td>Breaks words into smaller subword units.</td>
+
+</tr>
+
+<tr>
+
+<td>Rare Word Handling</td>
+
+<td>Weak</td>
+
+<td>Strong</td>
+
+</tr>
+
+<tr>
+
+<td>Out-of-Vocabulary Words</td>
+
+<td>Cannot handle effectively.</td>
+
+<td>Handles effectively.</td>
+
+</tr>
+
+<tr>
+
+<td>Morphological Understanding</td>
+
+<td>Limited</td>
+
+<td>Strong</td>
+
+</tr>
+
+<tr>
+
+<td>Computational Complexity</td>
+
+<td>Moderate</td>
+
+<td>Slightly Higher</td>
+
+</tr>
+
+<tr>
+
+<td>Memory Requirement</td>
+
+<td>Lower</td>
+
+<td>Higher</td>
+
+</tr>
+
+<tr>
+
+<td>Hindi Language Support</td>
+
+<td>Good</td>
+
+<td>Excellent</td>
+
+</tr>
+
+<tr>
+
+<td>Classification Accuracy</td>
+
+<td>Good</td>
+
+<td>Better for Indian languages</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- ================= EXAMPLE ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>💡 Example</h2>
+
+<p>
+
+Consider the Hindi word:
+
+</p>
+
+<blockquote>
+
+<strong>क्रिकेटर</strong>
+
+</blockquote>
+
+<p>
+
+<strong>Word2Vec</strong> treats the entire word as one complete unit.
+
+</p>
+
+<p>
+
+<strong>FastText</strong> divides the word into smaller character-level
+subwords (n-grams) and learns representations for each component.
+
+</p>
+
+<p>
+
+Because of this approach, FastText can successfully generate embeddings
+for previously unseen or rare Hindi words.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= STRENGTHS & WEAKNESSES ================= -->
+
+<section class="container">
+
+<div class="grid">
+
+<div class="card">
+
+<h2>✅ Strengths of Word2Vec</h2>
+
+<ul>
+
+<li>Efficient training.</li>
+
+<li>Good semantic representations.</li>
+
+<li>Lower memory consumption.</li>
+
+<li>Widely used in NLP applications.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>❌ Weaknesses of Word2Vec</h2>
+
+<ul>
+
+<li>Poor handling of rare words.</li>
+
+<li>Cannot effectively represent unknown words.</li>
+
+<li>Limited morphological understanding.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>✅ Strengths of FastText</h2>
+
+<ul>
+
+<li>Handles unseen words effectively.</li>
+
+<li>Uses character-level information.</li>
+
+<li>Works well for morphologically rich languages.</li>
+
+<li>Excellent for Hindi and other Indian languages.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>❌ Weaknesses of FastText</h2>
+
+<ul>
+
+<li>Larger model size.</li>
+
+<li>Slightly slower training.</li>
+
+<li>Requires more memory.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= KEY TAKEAWAY ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>🔑 Key Takeaway</h2>
+
+<p>
+
+The major difference is that <strong>Word2Vec</strong> learns
+embeddings for complete words, whereas <strong>FastText</strong>
+learns embeddings using character-level subwords.
+
+</p>
+
+<p>
+
+This allows FastText to better understand rare words,
+misspellings, and the rich morphology of Hindi,
+making it more suitable for Hindi Text Classification.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONCLUSION ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📌 Conclusion</h2>
+
+<p>
+
+For <strong>Hindi Text Classification</strong>,
+<strong>FastText</strong> is generally preferred because Hindi contains
+many word variations, prefixes, and suffixes.
+
+</p>
+
+<p>
+
+Its ability to learn subword representations makes it more robust,
+improves handling of unseen words, and often leads to better
+classification performance than Word2Vec.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<section class="container">
+
+<div class="page-navigation">
+
+<a href="tf-vs-tfidf.html" class="btn">
+
+⬅ Previous
+
+</a>
+
+<a href="index.html" class="btn secondary">
+
+📊 All Comparisons
+
+</a>
+
+<a href="one-hot-vs-word-embeddings.html" class="btn">
+
+Next ➜
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Hindi Text Classification using Natural Language Processing
+
+</p>
+
+<p>
+
+Developed by <strong>Mayank & Mohit</strong>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

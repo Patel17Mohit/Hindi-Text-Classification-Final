@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature Engineering </title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🧠 Hindi NLP
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../pages/introduction.html">Documentation</a></li>
+
+<li><a href="feature-engineering.html" class="active">Concepts</a></li>
+
+<li><a href="../comparative-analysis/index.html">Comparisons</a></li>
+
+<li><a href="../workflows/feature-engineering.html">Workflows</a></li>
+
+<li><a href="../applications/search-engine.html">Applications</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>📊 Feature Engineering</h1>
+
+<p>
+Feature Engineering converts processed Hindi text into numerical representations that Machine Learning algorithms can understand and use for classification.
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONTENT ================= -->
+
+<section class="container">
+
+<h2>Concepts Covered</h2>
+
+<ol class="concept-list">
+<li>Bag of Words (BoW)</li>
+<li>N-Grams</li>
+<li>Term Frequency (TF)</li>
+<li>Inverse Document Frequency (IDF)</li>
+<li>TF-IDF</li>
+</ol>
+
+<!-- ========================================== -->
+
+<div class="card">
+
+<h2>9. Bag of Words (BoW)</h2>
+
+<h3>Definition</h3>
+
+<p>
+Bag of Words (BoW) is a feature engineering technique that represents text using the frequency of words appearing in a document.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+To convert textual data into numerical vectors that Machine Learning models can process.
+</p>
+
+<h3>Example</h3>
+
+<h4>Sentence</h4>
+
+<blockquote>
+भारत क्रिकेट मैच जीता
+</blockquote>
+
+<h4>Vector Representation</h4>
+
+<blockquote>
+[भारत = 1, क्रिकेट = 1, मैच = 1, जीता = 1]
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Simple implementation</li>
+
+<li>Easy to understand</li>
+
+<li>Effective baseline model</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Ignores word order</li>
+
+<li>Does not capture context or semantics</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Spam Detection</li>
+
+<li>News Classification</li>
+
+<li>Document Classification</li>
+
+</ul>
+
+</div>
+
+<!-- ========================================== -->
+
+<div class="card">
+
+<h2>10. N-Grams</h2>
+
+<h3>Definition</h3>
+
+<p>
+N-Grams are sequences of N consecutive words that preserve local word order and context.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+To capture relationships between neighboring words that are ignored by Bag of Words.
+</p>
+
+<h3>Example</h3>
+
+<h4>Sentence</h4>
+
+<blockquote>
+भारत ने मैच जीता
+</blockquote>
+
+<h4>Bigrams</h4>
+
+<blockquote>
+भारत ने<br>
+ने मैच<br>
+मैच जीता
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Captures local context</li>
+
+<li>Improves classification accuracy</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Produces high-dimensional feature vectors</li>
+
+<li>Requires more storage</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Language Modeling</li>
+
+<li>Text Classification</li>
+
+<li>Machine Translation</li>
+
+</ul>
+
+</div>
+
+<!-- ========================================== -->
+
+<div class="card">
+
+<h2>11. Term Frequency (TF)</h2>
+
+<h3>Definition</h3>
+
+<p>
+Term Frequency (TF) measures how frequently a word appears in a document.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+To identify words that are important within a particular document.
+</p>
+
+<h3>Example</h3>
+
+<blockquote>
+If the word <strong>"क्रिकेट"</strong> appears 10 times in a sports article, its TF value is high.
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Easy to calculate</li>
+
+<li>Reflects word importance within a document</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Frequently occurring words receive high scores even if they are common.</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Search Systems</li>
+
+<li>Document Ranking</li>
+
+<li>Information Retrieval</li>
+
+</ul>
+
+</div>
+
+<!-- ========================================== -->
+
+<div class="card">
+
+<h2>12. Inverse Document Frequency (IDF)</h2>
+
+<h3>Definition</h3>
+
+<p>
+Inverse Document Frequency (IDF) measures how unique or informative a word is across an entire collection of documents.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+Reduce the importance of very common words while highlighting informative terms.
+</p>
+
+<h3>Example</h3>
+
+<blockquote>
+The word <strong>"क्रिकेट"</strong> mainly appears in sports articles, therefore it receives a higher IDF score.
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Identifies informative words</li>
+
+<li>Improves feature quality</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Very rare words may receive excessive importance.</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Search Engines</li>
+
+<li>Information Retrieval</li>
+
+<li>Document Ranking</li>
+
+</ul>
+
+</div>
+
+<!-- ========================================== -->
+
+<div class="card">
+
+<h2>13. TF-IDF</h2>
+
+<h3>Definition</h3>
+
+<p>
+TF-IDF combines Term Frequency (TF) and Inverse Document Frequency (IDF) to determine the importance of a word in a document relative to the entire collection.
+</p>
+
+<h3>Formula</h3>
+
+<blockquote>
+
+<strong>TF-IDF = TF × IDF</strong>
+
+</blockquote>
+
+<h3>Purpose</h3>
+
+<p>
+Assign higher weights to important words while reducing the influence of common words.
+</p>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Provides better feature representation</li>
+
+<li>Reduces the effect of common words</li>
+
+<li>Widely used in NLP applications</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Does not capture semantic meaning or word context.</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Search Ranking</li>
+
+<li>News Classification</li>
+
+<li>Document Classification</li>
+
+<li>Information Retrieval</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>© 2026 Hindi Text Classification using Natural Language Processing</p>
+
+<p>Developed by <strong>Mayank & Mohit</strong></p>
+
+</footer>
+
+</body>
+
+</html>

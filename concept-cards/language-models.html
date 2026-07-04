@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Language Models</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🧠 Hindi NLP
+        </div>
+
+        <ul class="nav-links">
+
+            <li><a href="../index.html">Home</a></li>
+
+            <li><a href="../pages/introduction.html">Documentation</a></li>
+
+            <li><a href="language-models.html" class="active">Concepts</a></li>
+
+            <li><a href="../comparative-analysis/index.html">Comparisons</a></li>
+
+            <li><a href="../workflows/language-representation.html">Workflows</a></li>
+
+            <li><a href="../applications/search-engine.html">Applications</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>🧠 Language Models</h1>
+
+        <p>
+            Language Models enable computers to understand, predict, and generate
+            natural language by learning patterns from large collections of text.
+            They play a crucial role in modern Natural Language Processing,
+            including Hindi Text Classification.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTENT ================= -->
+
+<section class="container">
+
+<h2>Concepts Covered</h2>
+
+<ol class="concept-list">
+
+<li>Statistical Language Models</li>
+
+<li>Neural Language Models</li>
+
+<li>Transformer-Based Representations</li>
+
+</ol>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>19. Statistical Language Models</h2>
+
+<h3>Definition</h3>
+
+<p>
+Statistical Language Models predict the probability of a word occurring based on
+the occurrence of previous words using statistical methods.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+Estimate the likelihood of word sequences for language understanding
+and text generation.
+</p>
+
+<h3>Working Principle</h3>
+
+<p>
+These models calculate probabilities from large text corpora.
+The probability of the next word depends on previously observed words.
+</p>
+
+<h3>Example</h3>
+
+<blockquote>
+
+<strong>N-Gram Models</strong>
+
+</blockquote>
+
+<p>
+For the phrase:
+</p>
+
+<blockquote>
+
+"भारत ने विश्व..."
+
+</blockquote>
+
+<p>
+the model predicts the most probable next word using word frequency statistics.
+</p>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Simple to understand</li>
+
+<li>Easy to implement</li>
+
+<li>Interpretable probability calculations</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Limited context understanding</li>
+
+<li>Cannot capture long-range dependencies</li>
+
+<li>Performance decreases for large vocabularies</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Spell Checking</li>
+
+<li>Speech Recognition</li>
+
+<li>Basic Text Prediction</li>
+
+<li>Machine Translation</li>
+
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>20. Neural Language Models</h2>
+
+<h3>Definition</h3>
+
+<p>
+Neural Language Models use Artificial Neural Networks to learn complex
+relationships between words and sentences.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+Generate richer language representations and improve prediction accuracy
+compared to statistical methods.
+</p>
+
+<h3>Working Principle</h3>
+
+<p>
+Words are converted into dense vectors (embeddings) and processed
+through neural networks to learn contextual relationships.
+</p>
+
+<h3>Example</h3>
+
+<p>
+Instead of memorizing word frequencies,
+the model learns semantic similarities between words such as:
+</p>
+
+<blockquote>
+
+राजा &nbsp;&nbsp;⇄&nbsp;&nbsp; रानी
+
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>Better understanding of context</li>
+
+<li>Captures semantic relationships</li>
+
+<li>Higher prediction accuracy</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Requires large datasets</li>
+
+<li>Needs significant computational resources</li>
+
+<li>Longer training time</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>Text Classification</li>
+
+<li>Machine Translation</li>
+
+<li>Chatbots</li>
+
+<li>Recommendation Systems</li>
+
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>21. Transformer-Based Representations</h2>
+
+<h3>Definition</h3>
+
+<p>
+Transformer-based models use the <strong>Self-Attention</strong> mechanism
+to understand relationships between all words in a sentence simultaneously,
+allowing better contextual understanding.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+Capture long-range dependencies and generate highly accurate
+context-aware language representations.
+</p>
+
+<h3>Working Principle</h3>
+
+<p>
+Instead of reading words one by one,
+transformers analyze the entire sentence at once and determine
+which words are most relevant to each other.
+</p>
+
+<h3>Popular Models</h3>
+
+<ul>
+
+<li>BERT</li>
+
+<li>GPT</li>
+
+<li>T5</li>
+
+<li>IndicBERT</li>
+
+<li>MuRIL</li>
+
+</ul>
+
+<h3>Example</h3>
+
+<p>
+The word <strong>"बैंक"</strong> has multiple meanings.
+Transformer models determine the correct meaning
+using surrounding words.
+</p>
+
+<blockquote>
+
+नदी का बैंक → River Bank
+
+<br><br>
+
+स्टेट बैंक → Financial Bank
+
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+
+<li>State-of-the-art performance</li>
+
+<li>Context-aware understanding</li>
+
+<li>Excellent semantic representation</li>
+
+<li>Supports multilingual tasks including Hindi</li>
+
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+
+<li>Computationally expensive</li>
+
+<li>Requires GPUs/TPUs for efficient training</li>
+
+<li>Large memory requirements</li>
+
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+
+<li>ChatGPT</li>
+
+<li>Machine Translation</li>
+
+<li>Hindi Text Classification</li>
+
+<li>Question Answering</li>
+
+<li>Search Engines</li>
+
+<li>Text Summarization</li>
+
+</ul>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<section class="container">
+
+<div class="page-navigation">
+
+<a href="language-representation.html" class="btn">
+⬅ Previous
+</a>
+
+<a href="../index.html" class="btn secondary">
+🏠 Home
+</a>
+
+<a href="../comparative-analysis/index.html" class="btn">
+Next ➜
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+© 2026 Hindi Text Classification using Natural Language Processing
+</p>
+
+<p>
+Developed by <strong>Mayank & Mohit</strong>
+</p>
+
+</footer>
+
+</body>
+
+</html>

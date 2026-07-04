@@ -1,0 +1,470 @@
+/* ==========================================
+   Hindi NLP Documentation Website
+   Main Stylesheet
+========================================== */
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* Import Other CSS Files */
+@import url("navbar.css");
+@import url("hero.css");
+@import url("about.css");
+@import url("cards.css");
+@import url("footer.css");
+@import url("responsive.css");
+
+/* ==========================================
+   CSS VARIABLES
+========================================== */
+
+:root{
+
+    --primary:#2563eb;
+    --secondary:#7c3aed;
+    --accent:#06b6d4;
+
+    --dark:#0f172a;
+    --dark-light:#1e293b;
+
+    --white:#ffffff;
+    --light:#f8fafc;
+    --gray:#64748b;
+    --border:#e2e8f0;
+
+    --shadow:0 10px 30px rgba(0,0,0,.08);
+    --shadow-hover:0 15px 35px rgba(37,99,235,.15);
+
+    --radius:18px;
+
+    --transition:.35s ease;
+}
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:var(--light);
+
+    color:var(--dark);
+
+    line-height:1.7;
+
+    overflow-x:hidden;
+
+}
+
+/* ==========================================
+   TYPOGRAPHY
+========================================== */
+
+h1,h2,h3,h4,h5,h6{
+
+    color:var(--dark);
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+h1{
+
+    font-size:3.2rem;
+
+}
+
+h2{
+
+    font-size:2.4rem;
+
+}
+
+h3{
+
+    font-size:1.4rem;
+
+}
+
+p{
+
+    color:var(--gray);
+
+    margin-bottom:15px;
+
+}
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+    transition:var(--transition);
+
+}
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.container{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+}
+
+/* ==========================================
+   SECTION
+========================================== */
+
+section{
+
+    padding:90px 0;
+
+}
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:15px;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    max-width:700px;
+
+    margin:0 auto 60px;
+
+    color:var(--gray);
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.btn{
+
+    display:inline-block;
+
+    padding:15px 34px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    font-weight:600;
+
+    transition:var(--transition);
+
+    box-shadow:var(--shadow);
+
+}
+
+.btn:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+.btn.secondary{
+
+    background:white;
+
+    color:var(--primary);
+
+    border:2px solid var(--primary);
+
+}
+
+.btn.secondary:hover{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+/* ==========================================
+   CARD BASE
+========================================== */
+
+.card{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    padding:30px;
+
+    box-shadow:var(--shadow);
+
+    transition:var(--transition);
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:var(--shadow-hover);
+
+}
+
+/* ==========================================
+   LISTS
+========================================== */
+
+ul{
+
+    list-style:none;
+
+}
+
+.content-list{
+
+    margin-top:20px;
+
+}
+
+.content-list li{
+
+    padding:12px 0;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+.content-list li:last-child{
+
+    border:none;
+
+}
+
+/* ==========================================
+   TABLES
+========================================== */
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin:30px 0;
+
+    background:white;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+}
+
+th{
+
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color:white;
+
+    padding:16px;
+
+}
+
+td{
+
+    padding:14px;
+
+    border-bottom:1px solid var(--border);
+
+}
+
+tr:hover{
+
+    background:#f8fbff;
+
+}
+
+/* ==========================================
+   CODE BLOCKS
+========================================== */
+
+pre{
+
+    background:#111827;
+
+    color:#f8fafc;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    overflow:auto;
+
+    margin:20px 0;
+
+}
+
+code{
+
+    font-family:Consolas, monospace;
+
+}
+
+/* ==========================================
+   IMAGE STYLING
+========================================== */
+
+.image-box{
+
+    margin:40px auto;
+
+    text-align:center;
+
+}
+
+.image-box img{
+
+    border-radius:18px;
+
+    box-shadow:var(--shadow);
+
+}
+
+.image-caption{
+
+    margin-top:12px;
+
+    color:var(--gray);
+
+    font-size:.9rem;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#e5e7eb;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:linear-gradient(
+        var(--primary),
+        var(--secondary)
+    );
+
+    border-radius:20px;
+
+}
+
+/* ==========================================
+   SELECTION
+========================================== */
+
+::selection{
+
+    background:var(--primary);
+
+    color:white;
+
+}
+
+/* ==========================================
+   FADE ANIMATION
+========================================== */
+
+.fade-up{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}

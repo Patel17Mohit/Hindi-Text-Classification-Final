@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Preprocessing</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            🧠 Hindi NLP
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../pages/introduction.html">Documentation</a></li>
+            <li><a href="preprocessing.html" class="active">Concepts</a></li>
+            <li><a href="../comparative-analysis/index.html">Comparisons</a></li>
+            <li><a href="../workflows/preprocessing.html">Workflows</a></li>
+            <li><a href="../applications/search-engine.html">Applications</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>🧹 Text Preprocessing</h1>
+
+        <p>
+            Text preprocessing transforms raw Hindi text into a clean,
+            structured format that can be effectively processed by
+            Natural Language Processing (NLP) models.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- ================= CONTENT ================= -->
+
+<section class="container">
+
+<h2>Concepts Covered</h2>
+
+<ol class="concept-list">
+<li>Sentence Segmentation</li>
+<li>Tokenization</li>
+<li>Case Normalization</li>
+<li>Stop-word Removal</li>
+<li>Stemming</li>
+<li>Lemmatization</li>
+<li>Noise Removal</li>
+<li>Text Cleaning</li>
+</ol>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>1. Sentence Segmentation</h2>
+
+<h3>Definition</h3>
+
+<p>
+Sentence Segmentation is the process of dividing a large text document into individual sentences. It identifies sentence boundaries using punctuation marks such as full stops, question marks, and exclamation marks.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+The main purpose is to organize large text into manageable units before further NLP processing.
+</p>
+
+<h3>Working Principle</h3>
+
+<h4>Input</h4>
+
+<blockquote>
+भारत ने विश्व कप जीता। टीम ने शानदार प्रदर्शन किया। पूरे देश में खुशी का माहौल है।
+</blockquote>
+
+<h4>Output</h4>
+
+<blockquote>
+भारत ने विश्व कप जीता।<br><br>
+टीम ने शानदार प्रदर्शन किया।<br><br>
+पूरे देश में खुशी का माहौल है।
+</blockquote>
+
+<h3>Example</h3>
+
+<p>
+A Hindi news article containing multiple statements is divided into separate sentences for easier analysis.
+</p>
+
+<h3>Advantages</h3>
+
+<ul>
+<li>Improves text organization</li>
+<li>Simplifies preprocessing</li>
+<li>Helps sentence-level analysis</li>
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+<li>Abbreviations may cause incorrect segmentation.</li>
+<li>Complex punctuation may create errors.</li>
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+<li>News Classification</li>
+<li>Machine Translation</li>
+<li>Text Summarization</li>
+<li>Chatbots</li>
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>2. Tokenization</h2>
+
+<h3>Definition</h3>
+
+<p>
+Tokenization is the process of splitting text into smaller units called tokens.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+Convert human-readable text into machine-processable units.
+</p>
+
+<h3>Working Principle</h3>
+
+<h4>Input</h4>
+
+<blockquote>
+भारत ने विश्व कप में शानदार जीत हासिल की।
+</blockquote>
+
+<h4>Output</h4>
+
+<blockquote>
+भारत | ने | विश्व | कप | में | शानदार | जीत | हासिल | की
+</blockquote>
+
+<h3>Example</h3>
+
+<p>
+Words such as "क्रिकेट", "खिलाड़ी", and "मैच" help identify sports-related documents.
+</p>
+
+<h3>Advantages</h3>
+
+<ul>
+<li>Foundation of NLP</li>
+<li>Helps feature extraction</li>
+<li>Simplifies analysis</li>
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+<li>Compound Hindi words may be difficult to tokenize.</li>
+<li>Context is not preserved.</li>
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+<li>Search Engines</li>
+<li>Chatbots</li>
+<li>Text Classification</li>
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>3. Case Normalization</h2>
+
+<h3>Definition</h3>
+
+<p>
+Case normalization converts text into a consistent format by changing letters into lowercase or uppercase.
+</p>
+
+<h3>Purpose</h3>
+
+<p>
+Avoid treating words with different letter cases as different words.
+</p>
+
+<h3>Example</h3>
+
+<blockquote>
+Machine Learning<br>
+machine learning<br>
+MACHINE LEARNING
+<br><br>
+↓<br><br>
+machine learning
+</blockquote>
+
+<p>
+Hindi itself has no uppercase/lowercase distinction, but this step is useful in mixed Hindi-English datasets.
+</p>
+
+<h3>Advantages</h3>
+
+<ul>
+<li>Reduces vocabulary size</li>
+<li>Improves consistency</li>
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+<li>May remove useful distinctions in some languages.</li>
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+<li>Text Classification</li>
+<li>Search Systems</li>
+<li>Information Retrieval</li>
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>4. Stop-word Removal</h2>
+
+<h3>Definition</h3>
+
+<p>
+Removes frequently occurring words that provide little information for classification.
+</p>
+
+<h3>Example</h3>
+
+<blockquote>
+भारत ने क्रिकेट मैच में शानदार जीत हासिल की है।
+<br><br>
+↓<br><br>
+भारत क्रिकेट मैच शानदार जीत हासिल
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+<li>Reduces dimensionality</li>
+<li>Faster processing</li>
+<li>Improves efficiency</li>
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+<li>Some stop words may carry useful meaning.</li>
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+<li>Search Engines</li>
+<li>Sentiment Analysis</li>
+<li>News Classification</li>
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>5. Stemming</h2>
+
+<h3>Definition</h3>
+
+<p>
+Stemming reduces words to their root form by removing prefixes and suffixes.
+</p>
+
+<h3>Example</h3>
+
+<blockquote>
+खेलना → खेल<br>
+खेलते → खेल<br>
+खेला → खेल
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+<li>Fast processing</li>
+<li>Reduces feature space</li>
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+<li>Root words may not always be linguistically correct.</li>
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+<li>Information Retrieval</li>
+<li>Text Classification</li>
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>6. Lemmatization</h2>
+
+<h3>Definition</h3>
+
+<p>
+Lemmatization converts words into their meaningful dictionary forms.
+</p>
+
+<h3>Example</h3>
+
+<blockquote>
+बच्चों → बच्चा<br>
+लड़कों → लड़का
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+<li>More accurate than stemming</li>
+<li>Preserves semantics</li>
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+<li>Computationally expensive.</li>
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+<li>Machine Translation</li>
+<li>Chatbots</li>
+<li>NLP Pipelines</li>
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>7. Noise Removal</h2>
+
+<h3>Definition</h3>
+
+<p>
+Noise removal eliminates emojis, punctuation, URLs, symbols, hashtags, and extra spaces.
+</p>
+
+<h3>Example</h3>
+
+<blockquote>
+भारत ने मैच जीता!!! 😊
+<br><br>
+↓<br><br>
+भारत ने मैच जीता
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+<li>Cleaner dataset</li>
+<li>Better model performance</li>
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+<li>Some symbols may carry useful information.</li>
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+<li>Social Media Analysis</li>
+<li>News Processing</li>
+</ul>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card">
+
+<h2>8. Text Cleaning</h2>
+
+<h3>Definition</h3>
+
+<p>
+Text cleaning combines multiple preprocessing techniques to prepare text for NLP tasks.
+</p>
+
+<h3>Example</h3>
+
+<h4>Raw Text</h4>
+
+<blockquote>
+भारत!!! ने ## मैच जीता 😊
+</blockquote>
+
+<h4>Clean Text</h4>
+
+<blockquote>
+भारत ने मैच जीता
+</blockquote>
+
+<h3>Advantages</h3>
+
+<ul>
+<li>Improves accuracy</li>
+<li>Standardizes data</li>
+</ul>
+
+<h3>Limitations</h3>
+
+<ul>
+<li>Excessive cleaning may remove useful information.</li>
+</ul>
+
+<h3>Applications</h3>
+
+<ul>
+<li>Text Classification</li>
+<li>Information Retrieval</li>
+</ul>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Hindi Text Classification using NLP</p>
+
+<p>Developed by <strong>Mayank & Mohit</strong></p>
+
+</footer>
+
+</body>
+</html>

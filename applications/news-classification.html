@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hindi News Classification</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVIGATION ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🧠 Hindi NLP
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../pages/introduction.html">Documentation</a></li>
+
+<li><a href="../concepts/preprocessing.html">Concepts</a></li>
+
+<li><a href="../workflows/preprocessing.html">Workflows</a></li>
+
+<li><a href="hindi-news-classification.html" class="active">Applications</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>📰 Application 6: Hindi News Classification</h1>
+
+<p>
+
+Learn how Natural Language Processing automatically classifies Hindi
+news articles into categories such as Sports, Politics, Business,
+Technology, and Entertainment.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📖 Overview</h2>
+
+<p>
+
+Hindi News Classification is an NLP application that automatically
+assigns Hindi news articles to predefined categories based on their
+content.
+
+</p>
+
+<p>
+
+Common news categories include:
+
+</p>
+
+<ul>
+
+<li>🏏 Sports</li>
+
+<li>🏛 Politics</li>
+
+<li>💼 Business</li>
+
+<li>💻 Technology</li>
+
+<li>🎬 Entertainment</li>
+
+</ul>
+
+<p>
+
+This application is highly relevant to the repository theme because it
+demonstrates the complete NLP pipeline for Hindi text classification.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= NLP CONCEPTS ================= -->
+
+<section class="container">
+
+<h2>🧠 Relevant NLP Concepts Used</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>🧹 Text Preprocessing</h3>
+
+<ul>
+
+<li>Tokenization</li>
+
+<li>Stop-word Removal</li>
+
+<li>Lemmatization</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>📊 Feature Engineering</h3>
+
+<ul>
+
+<li>Bag of Words (BoW)</li>
+
+<li>TF-IDF</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h3>🤖 Language Representation</h3>
+
+<ul>
+
+<li>Word2Vec</li>
+
+<li>FastText</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= WHY NLP ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>❓ Why These Concepts Are Needed</h2>
+
+<p>
+
+A machine learning model cannot directly understand raw Hindi text.
+Before classification, the text must undergo several NLP processing
+steps.
+
+</p>
+
+<ul>
+
+<li>🧹 Clean the raw text.</li>
+
+<li>🔤 Convert sentences into tokens.</li>
+
+<li>📊 Transform words into numerical representations.</li>
+
+<li>🤖 Use a classification algorithm to predict the news category.</li>
+
+</ul>
+
+<p>
+
+These preprocessing and feature engineering techniques enable the model
+to recognize meaningful patterns and accurately classify Hindi news
+articles.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= BENEFITS ================= -->
+
+<section class="container">
+
+<h2>🚀 Expected Benefits</h2>
+
+<div class="grid">
+
+<div class="card">
+
+<h3>📂 Automatic Content Organization</h3>
+
+<p>
+
+Automatically categorizes thousands of news articles without manual
+intervention.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>⚡ Faster News Publishing</h3>
+
+<p>
+
+Reduces the time required to organize and publish news content.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎯 Better Recommendation Systems</h3>
+
+<p>
+
+Improves personalized news recommendations by grouping similar
+articles together.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📈 Improved Search and Navigation</h3>
+
+<p>
+
+Makes it easier for users to discover news based on their interests.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= EXAMPLE ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>💡 Example</h2>
+
+<h3>Input</h3>
+
+<blockquote>
+
+"भारतीय क्रिकेट टीम ने विश्व कप जीता"
+
+</blockquote>
+
+<p>
+
+<strong>Predicted Category:</strong>
+
+</p>
+
+<blockquote>
+
+✅ Sports
+
+</blockquote>
+
+<hr>
+
+<h3>Input</h3>
+
+<blockquote>
+
+"संसद में नया विधेयक पारित हुआ"
+
+</blockquote>
+
+<p>
+
+<strong>Predicted Category:</strong>
+
+</p>
+
+<blockquote>
+
+✅ Politics
+
+</blockquote>
+
+<p>
+
+The NLP system analyzes the content, extracts meaningful features, and
+predicts the appropriate news category using machine learning models.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONCLUSION ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📌 Conclusion</h2>
+
+<p>
+
+Hindi News Classification is one of the most practical applications of
+Natural Language Processing. By combining preprocessing techniques,
+feature engineering methods such as TF-IDF, and language
+representations like Word2Vec and FastText, NLP systems can accurately
+categorize Hindi news articles. This improves content organization,
+recommendation systems, and user experience across digital news
+platforms.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<section class="container">
+
+<div class="page-navigation">
+
+<a href="text-summarization.html" class="btn">
+
+⬅ Previous
+
+</a>
+
+<a href="../index.html" class="btn secondary">
+
+🏠 Home
+
+</a>
+
+<a href="spam-detection.html" class="btn">
+
+Next ➜
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Hindi Text Classification using Natural Language Processing
+
+</p>
+
+<p>
+
+Developed by <strong>Mayank & Mohit</strong>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>

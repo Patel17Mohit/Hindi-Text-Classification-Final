@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>One-Hot Encoding vs Word Embeddings</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+🧠 Hindi NLP
+</div>
+
+<ul class="nav-links">
+
+<li><a href="../index.html">Home</a></li>
+
+<li><a href="../pages/introduction.html">Documentation</a></li>
+
+<li><a href="../concepts/language-representation.html">Concepts</a></li>
+
+<li><a href="index.html" class="active">Comparisons</a></li>
+
+<li><a href="../applications/search-engine.html">Applications</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>🔢 One-Hot Encoding vs Word Embeddings</h1>
+
+<p>
+
+Compare two important language representation techniques used to convert
+text into numerical vectors for Natural Language Processing.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= OVERVIEW ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📖 Overview</h2>
+
+<p>
+
+Both <strong>One-Hot Encoding</strong> and
+<strong>Word Embeddings</strong> convert words into numerical vectors that
+machine learning models can process.
+
+</p>
+
+<p>
+
+However, they differ significantly in how they represent words.
+One-Hot Encoding treats every word as independent, whereas Word Embeddings
+capture semantic relationships and contextual similarities between words.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= COMPARISON TABLE ================= -->
+
+<section class="container">
+
+<h2>📊 Comparison Table</h2>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+
+<th>Parameter</th>
+
+<th>One-Hot Encoding</th>
+
+<th>Word Embeddings</th>
+
+</tr>
+
+<tr>
+
+<td>Representation Type</td>
+
+<td>Sparse vectors</td>
+
+<td>Dense vectors</td>
+
+</tr>
+
+<tr>
+
+<td>Semantic Understanding</td>
+
+<td>None</td>
+
+<td>Captures semantic relationships</td>
+
+</tr>
+
+<tr>
+
+<td>Vector Size</td>
+
+<td>Very large</td>
+
+<td>Compact</td>
+
+</tr>
+
+<tr>
+
+<td>Memory Usage</td>
+
+<td>High</td>
+
+<td>Lower</td>
+
+</tr>
+
+<tr>
+
+<td>Similarity Detection</td>
+
+<td>Not possible</td>
+
+<td>Possible</td>
+
+</tr>
+
+<tr>
+
+<td>Computational Efficiency</td>
+
+<td>Lower for large vocabularies</td>
+
+<td>Higher</td>
+
+</tr>
+
+<tr>
+
+<td>Context Awareness</td>
+
+<td>No</td>
+
+<td>Yes</td>
+
+</tr>
+
+<tr>
+
+<td>Suitability for NLP Tasks</td>
+
+<td>Basic</td>
+
+<td>Advanced</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<!-- ================= EXAMPLE ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>💡 Example</h2>
+
+<p>
+
+Consider the vocabulary:
+
+</p>
+
+<ul>
+
+<li>राजा</li>
+
+<li>रानी</li>
+
+<li>क्रिकेट</li>
+
+</ul>
+
+<h3>One-Hot Encoding</h3>
+
+<blockquote>
+
+राजा → [1,0,0]
+
+<br><br>
+
+रानी → [0,1,0]
+
+</blockquote>
+
+<p>
+
+The model treats these words as completely unrelated because each word
+has its own independent vector.
+
+</p>
+
+<h3>Word Embeddings</h3>
+
+<p>
+
+The vectors for <strong>राजा</strong> and
+<strong>रानी</strong> become closer in the vector space because they share
+similar semantic meaning.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= STRENGTHS & WEAKNESSES ================= -->
+
+<section class="container">
+
+<div class="grid">
+
+<div class="card">
+
+<h2>✅ Strengths of One-Hot Encoding</h2>
+
+<ul>
+
+<li>Easy to understand.</li>
+
+<li>Simple implementation.</li>
+
+<li>No training required.</li>
+
+<li>Suitable for small vocabularies.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>❌ Weaknesses of One-Hot Encoding</h2>
+
+<ul>
+
+<li>Sparse vectors.</li>
+
+<li>No semantic information.</li>
+
+<li>Large memory requirements.</li>
+
+<li>Poor scalability for large vocabularies.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>✅ Strengths of Word Embeddings</h2>
+
+<ul>
+
+<li>Capture semantic meaning.</li>
+
+<li>Represent relationships between words.</li>
+
+<li>Compact dense vectors.</li>
+
+<li>Improve model performance.</li>
+
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>❌ Weaknesses of Word Embeddings</h2>
+
+<ul>
+
+<li>Require training data.</li>
+
+<li>More complex implementation.</li>
+
+<li>Higher computational cost during training.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= KEY TAKEAWAY ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>🔑 Key Takeaway</h2>
+
+<p>
+
+The major difference is that
+<strong>One-Hot Encoding</strong> represents words independently using sparse
+binary vectors, whereas
+<strong>Word Embeddings</strong> learn dense vectors that capture semantic
+relationships and contextual similarities.
+
+</p>
+
+<p>
+
+Because of this, Word Embeddings provide significantly richer information
+for machine learning models.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= CONCLUSION ================= -->
+
+<section class="container">
+
+<div class="card">
+
+<h2>📌 Conclusion</h2>
+
+<p>
+
+For <strong>Hindi Text Classification</strong>,
+<strong>Word Embeddings</strong> are significantly more effective than
+One-Hot Encoding because they capture semantic relationships between words.
+
+</p>
+
+<p>
+
+Their compact vector representations improve classification accuracy,
+reduce memory usage, and enable models to understand contextual meaning,
+making them the preferred choice for modern NLP systems.
+
+</p>
+
+</div>
+
+</section>
+
+<!-- ================= PAGE NAVIGATION ================= -->
+
+<section class="container">
+
+<div class="page-navigation">
+
+<a href="word2vec-vs-fasttext.html" class="btn">
+
+⬅ Previous
+
+</a>
+
+<a href="index.html" class="btn secondary">
+
+📊 All Comparisons
+
+</a>
+
+<a href="statistical-vs-neural-language-models.html" class="btn">
+
+Next ➜
+
+</a>
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<p>
+
+© 2026 Hindi Text Classification using Natural Language Processing
+
+</p>
+
+<p>
+
+Developed by <strong>Mayank & Mohit</strong>
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
